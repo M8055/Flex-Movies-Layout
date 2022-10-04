@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+    line-height: 1.5;
+    font-family: 'Asap', sans-serif;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Asap', sans-serif;
+
+}
+.img-fluid{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+.section-header{
+    color: #000;
+    font-size: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+/* ======================= header css ============================== */
+
+.header{
+    background-color: black;
+    color: #ffff;
+    flex-direction: column;
+    height: 400px;
+    display: flex;
+}
+
+.site-info{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading{
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+.site-description{
+    text-align: center;
+    color: #F6D200;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #F6D200;
+    flex-direction: column;
+}
+nav.navbar ul li {
+    flex-grow: 1;
+}
+.navbar ul li  a:link, .navbar ul li  a:visited{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: block;
+    color: #000;
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+}
+.navbar ul li  a:hover, .navbar ul li  a:focus, .navbar ul li  a:active{
+    color: #F6D200;
+    background-color: #000;
+}
+/*================== content-area"=========================*/
+.main-content-area{
+    padding: 20px;
+}
+
+.sidebar-right{
+    background-color: blueviolet;
+    color: #ffff;
+}
+
+/*=============================  post css =========================*/
+.post{
+    background: #fff;
+    margin-bottom: 20px;
+}
+section.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post-content{
+    padding:  0 40px 20px;
+}
+.post-content h2{
+    background-color: #F6D200;
+    padding: 30px;
+    margin: 0 -40px 0 -40px;
+    text-align: center;
+}
+.post-content p{
+    padding-top: 20px;
+}
+
+/*=============================  Watch today css =========================*/
+
+.watch-card {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.watch-content{
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+}
+.watch-content h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+.movie-info{
+    font-weight: bold;
+}
+.movie-info span{
+    margin-right: 20px;
+}
+.movie-story{
+    margin-bottom: 16px;
+}
+.movie-info a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.rightImg{
+    order: 1;
+}
+
+/* ================================ css for download toady ===================================== */
+
+.download-card{
+    display: flex;
+    flex-direction: column;
+}
+.download-content{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.downlaod-info{
+    padding: 20px;
+    
+}
+.download-link{
+    color: #fff !important;
+    background-color: #000;
+    padding:16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.download-link i{
+    font-size: 48px;  
+}
+.download-cast, .download-gener{
+    display: flex;
+    flex-wrap: wrap;
+}
+.download-gener{
+    margin-bottom: 10px;
+}
+.download-cast h4, .download-gener h4{
+    flex-basis: 20%;
+}
+.download-cast img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.download-rating{
+    color: #000;
+    background-color: #F6D200;
+    padding:16px 32px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rating {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: -11px;
+}
+
+/* =================================== section movie gallary images ========================================  */
+.MovieGallary {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+}
+.movie-img{
+   
+    height: 250px;
+    flex-grow: 1;
+    margin: 0 0 8px 8px
+}
+.movie-img  img{
+    height: 100%;
+   
+}
+
+/* 4*0+1 >> 1
+4*1+1 >> 5
+4*2+1 >> 9 */
+
+ .movie-img:nth-child(4n+1){
+    flex-basis: 250px;
+}
+
+/* 4*0+2 >> 2
+4*1+2 >> 6
+4*2+2 >> 10 */
+
+.movie-img:nth-child((4n + 2)){
+    flex-basis: 425px;
+}
+
+/* 4*0+3 >> 3
+4*1+3 >> 7
+ */
+
+.movie-img:nth-child((4n + 3)){
+    flex-basis: 175px;
+}
+
+/* 4, 8 */
+.movie-img:nth-child((4n + 4)){
+    flex-basis: 380px;
+}
+/* ===================================== aside -css ==================== */
+.sidebar-right{
+    background-color:#ededed;
+    padding: 20px;
+
+}
+.widget{
+    background-color: #fff;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.widget-content{
+    padding: 10px 20px;
+}
+.widget-content h3{
+    margin-bottom: 7px;
+}
+.sidebar-menu ul{
+    list-style: none;
+}
+.sidebar-menu ul a{
+    display: block;
+    padding: 2px 15px;
+    font-weight: bold;
+    color: #000;
+}
+/* ===================================== footer-css ==================== */
+
+.footer{
+    background-color: #000;
+    color: #ededed;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+@media all and (min-width:768px){
+    .post{
+        width: 49%;
+    }
+    .download-content{      
+        flex-direction: row;   
+    }
+    .download-rating, .download-link{
+        flex-grow: 1;
+    }
+   .downlaod-info{
+        flex-grow: 2;
+    } 
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/*=============================== All media goes heare ================================*/
+@media all and (min-width:1200px) {
+    .content-area{
+        display: flex;
+    }
+    .sidebar-right{
+        /*flex: 0 0 400px; short hand*/
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 500px;
+    }
+    .navbar ul{
+        flex-direction: row;
+        text-align: center;
+    }
+    .heading{
+        font-size: 64px;
+    }
+    .post-half{
+        width: 45%;
+    }
+    .post-one-third{
+        width: 33%;
+    }
+    .post-full{
+        width: 100%;
+    }
+    .watch-card{
+        flex-direction: row;
+    }
+    .watch-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .rightImg{
+        order: 2;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1200px){
+    .sidebar-right{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .widget{
+        flex-basis: 49%;
+    }
+}
+
